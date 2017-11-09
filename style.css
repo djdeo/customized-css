@@ -1,0 +1,36 @@
+body {
+	max-width: 960px;
+	margin:10px auto;
+	font-size: 16px;
+}
+
+h1 {
+	border-bottom: 2px solid #333;
+}
+
+h2 {
+	text-decoration-line: underline;
+	padding: 2px;
+}
+
+kbd{
+    font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;
+    background: hsl(0, 0%, 96%); 
+    border-radius: 0.2em; 
+    -webkit-box-shadow: 0.175em 0.175em 0.5em 0 hsl(0, 0%, 67%); 
+    box-shadow: 0.175em 0.175em 0.5em 0 hsl(0, 0%, 67%); 
+    display: inline-block; 
+    padding: 0em 1em;
+    color: hsl(0, 0%, 4%);
+    margin:0 0.25em;
+}
+
+pre {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	padding: 16px;
+	overflow: auto;
+	font-size: 90%;
+	line-height: 1.45;
+	background-color: hsl(0, 0%, 97%);
+	border-radius: 3px;
+}
