@@ -35,3 +35,46 @@ pre {
 	background-color: hsl(0, 0%, 97%);
 	border-radius: 3px;
 }
+
+/*hover and show div content*/
+
+div {
+	width: 50%;
+	float: left;
+}
+img {
+	display: block;
+	margin: auto;
+	width: 100%
+}
+
+figure figcaption {
+	display: none;
+}
+ 
+figure:hover figcaption {
+	display: block;
+}
+
+figure:hover figcaption a,
+div:hover span a {
+	color: lightgray;
+	float: right;
+}
+
+div span {
+	display: none;
+}
+
+
+div:hover span {
+	display: inline-block;
+}
+
+/*media query*/
+
+@media only screen and (max-width: 480px) {
+	div {
+		width: 100%;
+	}
+}
