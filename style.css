@@ -36,6 +36,12 @@ pre {
 	border-radius: 3px;
 }
 
+figure figcaption {
+	font-style: italic;
+	margin-top: 10px;
+	text-align: center;
+}
+
 /*hover and show div content*/
 
 div {
