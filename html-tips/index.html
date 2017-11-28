@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery load header and footer</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/html-tips/load.js"></script>
+</head>
+<body>
+<header></header>
+<section class="section">
+<div class="content columns">
+<div class="column is-offset-2 is-8">
+<h2>To use:</h2>
+<p>Add jQuery code in <code>script</code></p>
+<pre><code>
+$(document).ready(function(){
+	$('header').load('/path-to/header.html');
+	$('footer').load('/path-to/footer.html');
+});
+</code></pre>
+<h2>To test:</h2>
+<blockquote>http://localhost</blockquote>
+<p>Or run it from:</p>
+<blockquote>http://127.0.0.1</blockquote>
+<p>Or you will get this error:</p>
+<blockquote>
+	Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
+</blockquote>
+</div>
+</div>
+</section>
+<footer></footer>
+</body>
+</html>
