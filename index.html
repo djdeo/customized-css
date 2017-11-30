@@ -53,6 +53,31 @@ pre {
 	</pre>
 
 	<p>Do not to use html beautify plug in for <code>pre</code> tag, or the will be centered or padding-left will many space.</p>
+
+	<h2>
+		dl, dt
+	</h2>
+
+
+	<dl>
+	  <dt>Coffee</dt>
+	  <dd>Black hot drink</dd>
+	  <dt>Milk</dt>
+	  <dd>White cold drink</dd>
+	</dl>
+<pre><code>
+dl dt {
+	float: left;
+	font-weight: bold;
+	text-align: right;
+	width: 160px;
+	margin-right: 10px;
+}
+
+dl dt:after {
+	content: ':';
+}
+</code></pre>
 	
 	
 </body>

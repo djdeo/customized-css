@@ -14,6 +14,18 @@ h2 {
 	padding-bottom: 2px;
 }
 
+dl dt {
+	float: left;
+	font-weight: bold;
+	text-align: right;
+	width: 160px;
+	margin-right: 10px;
+}
+
+dl dt:after {
+	content: ':';
+}
+
 kbd{
     font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;
     background: hsl(0, 0%, 96%); 
