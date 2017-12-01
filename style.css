@@ -19,11 +19,20 @@ dl dt {
 	font-weight: bold;
 	text-align: right;
 	width: 160px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 dl dt:after {
 	content: ':';
+}
+
+ul {
+	list-style-type: none;
+}
+
+li:before {
+	content: '>';
+	padding-right: 8px;
 }
 
 kbd{
