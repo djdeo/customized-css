@@ -75,6 +75,18 @@ img {
 	width: 100%
 }
 
+
+figure img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+figure figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
 figure figcaption {
 	display: none;
 }
