@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    position: relative;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer .content-wrap{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+}
+.top {
+    background: #eee;
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+    z-index: 2;
+}
+
+.top .content-wrap{
+    margin-left: 1000px;
+}
+
+.bottom {
+    background: #222;
+    z-index: 1;
+}
+img{
+    position: absolute;
+    width: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
