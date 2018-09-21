@@ -1,0 +1,35 @@
+body {
+    max-width: 980px;
+    margin: 5px auto;
+}
+
+.social-icon {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icon  li {
+    display: inline-block;
+}
+
+.social-icon a {
+    background-image: url(icons.svg);
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: teal;
+}
+
+.facebook {
+    background-position: -15px 0;
+}
+
+.twitter {
+    background-position: -32px 0;
+}
+
+.gplus {
+    background-position: -53px 0;
+}
