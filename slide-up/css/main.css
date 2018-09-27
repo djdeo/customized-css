@@ -1,0 +1,45 @@
+body {
+  max-width: 960px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+h2 span {
+  display: inline-block;
+  visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+h2:hover span {
+  visibility: visible;
+  -webkit-transform: translate3d(0, -20%, 0);
+          transform: translate3d(0, -20%, 0);
+}
+
+h2 .buy a, h2 .try a {
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: .8rem;
+  text-decoration: none;
+  -webkit-transition: border-radius .3s ease-out;
+  transition: border-radius .3s ease-out;
+}
+
+h2 .buy a {
+  background-color: #cd2122;
+}
+
+h2 .try a {
+  background-color: teal;
+}
+
+h2 .buy a:hover, h2 .try a:hover {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
