@@ -1,0 +1,153 @@
+body {
+  background: #444;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ddd;
+  opacity: .1;
+}
+
+.menu-icon {
+  float: right;
+  z-index: 3;
+}
+
+.menu-icon .menu-item {
+  display: block;
+  top: 50px;
+  right: 50px;
+  width: 110px;
+  height: 5px;
+  background: #fff;
+  padding: 10px 0;
+  margin: 1rem;
+  -webkit-transition: all 0.38s ease-out;
+  transition: all 0.38s ease-out;
+}
+
+.menu-icon.show .menu-item:nth-child(1) {
+  -webkit-transform: rotateZ(45deg) translate(45px, 45px);
+          transform: rotateZ(45deg) translate(45px, 45px);
+}
+
+.menu-icon.show .menu-item:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.show .menu-item:nth-child(3) {
+  -webkit-transform: rotateZ(-45deg) translate(10px, -12px);
+          transform: rotateZ(-45deg) translate(10px, -12px);
+}
+
+.menu {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.38s ease-out;
+  transition: all 0.38s ease-out;
+}
+
+.menu-branding, .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-branding {
+  background-color: #454545;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all 0.38s ease-out;
+  transition: all 0.38s ease-out;
+}
+
+.menu-branding.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  background: #424242;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 0.38s ease-out;
+  transition: all 0.38s ease-out;
+}
+
+.menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav .nav-item {
+  list-style-type: none;
+  font-size: 3rem;
+  margin: 5px;
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all 0.38s ease-out;
+  transition: all 0.38s ease-out;
+}
+
+.menu-nav .nav-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu.show {
+  opacity: 0.9;
+}
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+/*# sourceMappingURL=main.css.map */

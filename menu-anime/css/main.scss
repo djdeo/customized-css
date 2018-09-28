@@ -1,0 +1,121 @@
+@mixin easeOut {
+  transition: all 0.38s ease-out;
+}
+
+body {
+  background: #444;
+  // max-width: 1024px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+
+  h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    opacity: .1;
+  }
+}
+
+.menu-icon {
+  float: right;
+  z-index: 3;
+
+  .menu-item {
+    // position: fixed;
+    display: block;
+    top: 50px;
+    right: 50px;
+    width: 110px;
+    height: 5px;
+    background: #fff;
+    padding: 10px 0;
+    margin: 1rem;
+    @include easeOut;
+  }
+
+  &.show {
+    .menu-item:nth-child(1) {
+      transform: rotateZ(45deg) translate(45px, 45px);
+    }
+    .menu-item:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-item:nth-child(3) {
+      transform: rotateZ(-45deg) translate(10px, -12px);
+    }
+  }
+}
+
+.menu {
+  opacity: 0;
+  display: flex;
+
+  @include easeOut;
+
+  &-branding,
+  &-nav {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-branding {
+    background-color: lighten($color: #444444, $amount: 0.5);
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    // slide from the bottom
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem;
+    background: darken($color: #444, $amount: 0.95);
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    // slide from the top
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .nav-item {
+      list-style-type: none;
+      font-size: 3rem;
+      margin: 5px;
+      transform: translate3d(600px, 0, 0);
+      @include easeOut;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &.show {
+    opacity: 0.9;
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
