@@ -1,0 +1,32 @@
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: .3rem;
+}
+
+.nav-menu{
+    background: #eee;
+    padding: 3px 6px;
+}
+
+.main-nav {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline-block;
+    
+}
+.nav-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: .8rem;
+    transition: background-color 350ms ease-out;
+}
+
+.nav-item:hover a, .nav-item.active a {
+    background-color: #cd2122;
+    color: #fff;
+}
