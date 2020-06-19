@@ -1,0 +1,128 @@
+//colors
+$colors: (
+  "primary": #db9e3f,
+  "white": #fff,
+  "light": #f9f9f9,
+  "gray": #999,
+  "black": #000,
+  "dark": #222,
+);
+
+// text-color
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color
+  }
+};
+// background-color
+@each $bgKey, $color in $colors {
+  .bg-#{$bgKey} {
+    background-color: $color;
+  }
+}
+
+// text-align
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+};
+
+//font-size
+$base-font-size: 1rem;
+$font-sizes:(
+  xs: 0.625,
+  sm: 0.75,
+  md: 1,
+  lg: 0.875,
+  xl: 1
+);
+
+@each $sizeKey, $size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size * $base-font-size;
+  }
+}
+
+// flex
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex:1
+}
+// justify-content
+$flex-jc:(
+  start:flex-start,
+  end:flex-end,
+  center:center,
+  between: space-between,
+  around:space-around
+);
+// align-items
+$flex-ai:(
+  start:flex-start,
+  end:flex-end,
+  center:center,
+  strech: strech,
+);
+
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    justify-content: $value;
+  }
+};
+
+
+/**
+  margin, padding
+  - x, y 表示水平，竖直方向
+  - 0~5， 6个等级， 以rem参考
+  - eg: 
+    -: m-0, p-0 
+    -: mt-1, pt-1
+*/
+$space-types:(m: margin, p: padding);
+$space-directions:(t: top, r: right, b: bottom, l: left);
+$space-base-sizes: 1rem;
+$space-sizes: (0:0, 1:0.25, 2: 0.5, 3:1, 4:1.5, 5:3);
+
+
+@each $typeKey, $type in $space-types {
+  // .m-0
+   @each $sizeKey, $size in $space-sizes {
+      .#{$typeKey}-#{$sizeKey} {
+        #{$type}:$size * $space-base-sizes;
+      }
+    }
+  // .mt-1 { margin: 0.25rem }
+  @each $directionKeys, $direction in $space-directions {
+    @each $sizeKey, $size in $space-sizes {
+      .#{$typeKey}#{$directionKeys}-#{$sizeKey} {
+        #{$type}-#{$direction}:$size * $space-base-sizes;
+      }
+    }
+  }
+  // .mx-1, .my-1, .px-1, .py-1
+    @each $sizeKey, $size in $space-sizes {
+      .#{$typeKey}x-#{$sizeKey} {
+        #{$type}-left:$size * $space-base-sizes;
+        #{$type}-right:$size * $space-base-sizes;
+      }
+      .#{$typeKey}y-#{$sizeKey} {
+        #{$type}-top:$size * $space-base-sizes;
+        #{$type}-bottom:$size * $space-base-sizes;
+      }
+    }
+  
+}
